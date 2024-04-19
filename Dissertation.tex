@@ -1,0 +1,315 @@
+\documentclass[12pt]{style/Diss_style} % Don't remove the file names Diss_style.cls
+\usepackage{enumitem}
+\setlist{labelsep=2pt, topsep=0.5em, itemsep=0.5em, leftmargin=24pt}
+% \newcommand{\staritem}{\global\asterisktrue\item}
+% \newcommand{\perhapsasterisk}{%
+%   \ifasterisk*\global\asteriskfalse\fi
+% }
+% \newif\ifasterisk
+\let\procedure\relax
+\let\endprocedure\relax
+\usepackage{algorithm} 
+\usepackage[ruled,vlined,algo2e]{algorithm2e}
+\usepackage[utf8]{inputenc}
+\usepackage{algpseudocode}
+% \usepackage{algorithm}
+\usepackage[colorlinks=true,
+            linkcolor=black,
+            urlcolor=black,
+            citecolor=black]{hyperref}
+\usepackage[activate={true,nocompatibility},final,kerning=true,factor=1100,stretch=10,shrink=10]{microtype}
+\usepackage{rotating}
+\usepackage{lscape}
+\usepackage{indentfirst}
+\usepackage{latexsym}
+\usepackage{multirow}
+\usepackage{tabls}
+\usepackage{wrapfig}
+\usepackage{style/slashbox}
+\usepackage{longtable}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{cite}
+\usepackage{url}
+\usepackage{boxedminipage}
+\usepackage{listings}
+\usepackage{ifpdf}
+\usepackage{verbatim}
+\usepackage{color}
+\usepackage{listings}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+% \usepackage{amsmath}
+% \usepackage{amssymb}
+\usepackage{amsthm}
+% \usepackage{url}
+\usepackage{dirtree}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{siunitx} 
+\makeatletter
+\newcommand\textlcsc[1]{\textsc{\MakeLowercase{#1}}}
+% \newcommand{\thickhline}{%
+%     \noalign {\ifnum 0=`}\fi \hrule height 1pt
+%     \futurelet \reserved@a \@xhline
+% }
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
+\makeatother
+
+% \usepackage{times}
+\usepackage{setspace}
+\usepackage{titlesec}
+% \usepackage{cite}
+\usepackage{appendix}
+% \usepackage{enumerate}            
+%\usepackage{amsmath,empheq}
+% \usepackage{subcaption}
+% \usepackage{kantlipsum}  
+\usepackage{times}
+\usepackage{lipsum} 
+\usepackage{mwe} 
+\usepackage{float}
+\usepackage{pifont}
+% \usepackage{amssymb}
+\usepackage{fancyvrb}
+\usepackage{adjustbox}
+% \usepackage{etex}
+% \reserveinserts{50}
+\usepackage{morefloats}
+% \usepackage{float}
+% \usepackage{array}
+\usepackage{parskip}
+\usepackage{tabto}
+\usepackage{minted}
+
+\pagenumbering{roman}
+
+%%%%% This is to manage the size and alignment of the Table columns %%%%%%%%%%%%%%%%
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\ifpdf
+	\DeclareGraphicsExtensions{.pdf, .jpg, .tif, .png}
+\else
+	\DeclareGraphicsExtensions{.eps, .jpg}
+\fi
+
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.75}
+
+\renewcommand{\baselinestretch}{2}
+\setlength{\textwidth}{5.7in}
+\setlength{\textheight}{9in}
+\setlength{\topmargin}{-.50in}
+\setlength{\oddsidemargin}{.5in}
+
+\clubpenalty=10000
+\widowpenalty=10000
+\newtheorem{definition}{Definition}[chapter]
+
+%%%%% Configure these parameters %%%%%%%%
+\newcommand{\myfirstname}{First}
+\newcommand{\mylastname}{Last}
+\newcommand{\myadvisor}{My Advisor name}
+\newcommand{\mytitle}{My Title}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Include other packages here, before hyperref.
+\def\eg{\emph{e.g. }}
+\def\Eg{\emph{E.g. }}
+\def\etal{et al. }
+\newcommand{\Vector}[1]{\lowercase{\mathbf{#1}}}
+\newcommand{\Matrix}[1]{\uppercase{\mathsf{#1}}}
+\newcommand{\Skew}[1]{[\Vector{#1}]_\times}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hypersetup{final}
+
+
+\begin{document}
+ %This is all title pages, acknowledgments, copyright, etc.
+ %
+ %
+ %
+ %
+\title{\textlcsc{{\LARGE \mytitle}}}
+\author{By \\
+\textlcsc{\large \myfirstname \mylastname} \\
+B.S., X University, USA, 2012\\
+M.S., Y University, USA, 2014\\
+\\ 
+\\ 
+A dissertation submitted to the Graduate Faculty of the\\
+University of Colorado Colorado Springs\\
+in partial fulfillment of the\\
+requirements for the degree of\\
+Doctor of Philosophy \\
+Department of Computer Science\\
+\the\year}
+\maketitle
+%%%%%%%%%%%Copyright Page
+\thispagestyle{empty}
+\pagenumbering{roman}
+\begin{center}
+
+	\vspace*{\fill}
+	%\vspace{7.0in}
+	\copyright \space \the\year \\ \textsc{\myfirstname \mylastname} \\
+	ALL RIGHTS RESERVED\rm
+	\end{center}
+%\end{minipage}
+%
+%%%%%%%%%%%Signatures Page
+%\newpage
+\begin{minipage}{5.0in}
+
+\end{minipage}
+\newpage
+% \thispagestyle{plain}
+
+
+\begin{center}
+	This dissertation for Doctor of Philosophy degree by\\
+	\myfirstname \mylastname\\
+	has been approved for the \\
+ 	Department of Computer Science \\
+	by \\ % Don't put "Dr."
+	\vspace{3.0pc}
+	\myadvisor, Chair \\
+	\vspace{2.0pc}
+    Member 1 \\
+	\vspace{2.0pc}
+	Member 2 \\
+	\vspace{2.0pc}
+	Member 3 \\
+	\vspace{2.0pc}
+	Member 4 \\
+\end{center}
+
+\begin{flushright}
+	\vspace{2.0pc}
+	\date{\today}\\[-1.8pc] 
+	\makebox[1.3in]{\hrulefill} \\[-1.0pc]
+% 	\date{\today} \\[-1.0pc]
+	Date 
+\end{flushright}
+
+\newpage
+
+\setlength{\parindent}{0in} 
+\mylastname, \myfirstname \space (Ph.D., Computer Science)
+
+\mytitle 
+
+Dissertation directed by Professor's Title \myadvisor 
+
+\begin{center}
+\textbf{ABSTRACT}
+\end{center}
+
+\input{0-Abstract}
+\setlength{\parindent}{.4in}
+
+
+%Acknowledgments
+\newpage
+\begin{center}
+	{\large{\bf \textlcsc{Acknowledgments}}}
+\end{center}
+\setlength{\parindent}{.4in}
+
+Your Acknowledgments
+
+
+% Dedication
+\newpage
+\begin{center}
+	{\large{\bf \textlcsc{Dedication}}}
+\end{center}
+\setlength{\parindent}{.4in}
+
+\emph{\begin{center}
+    Your Dedication.
+\end{center} }
+
+% TABLE OF CONTENTS
+\newpage
+\small\normalsize
+%\begin{spacing}{1.0}
+\tableofcontents %(required, lower-case Roman)
+%\end{spacing}
+
+
+% LIST OF TABLES
+\newpage
+\setlength{\parskip}{1em}
+%\begin{spacing}{1.0}
+\listoftables %(if present, lower-case Roman)
+%\end{spacing}
+
+
+% LIST OF FIGURES
+\newpage
+%\begin{spacing}{1.0}
+\listoffigures %(if present, lower-case Roman)
+%\end{spacing}
+
+
+
+\setlength{\parindent}{.4in}
+\lstset{
+  breaklines=true,
+  language=XML,
+  frame=ltrb,
+  framesep=5pt,
+  basicstyle=\normalsize
+}
+
+\newpage
+\pagenumbering{arabic}
+\setlength{\parskip}{0em}
+\small\normalsize
+%
+%
+\setcounter{tocdepth}{2}
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+\setlength{\parindent}{.4in}
+
+\lstset{
+  breaklines=true,
+  language=XML,
+  frame=ltrb,
+  framesep=5pt,
+  basicstyle=\normalsize
+}
+%--------Chapters Begins
+
+\input{1.Introduction}
+\input{2.Problem_Background}
+\input{3.Literature_Review}
+\input{4.First_idea}
+\input{5.Second_idea}
+\input{6.Third_idea}
+\input{7.Conclusion}
+
+%Bibliography
+\renewcommand{\baselinestretch}{2}  % makes it double line
+\small\normalsize
+\newpage
+\interlinepenalty=10000
+\bibliographystyle{ieeetr}  % this uses IEEE citation format [1] [2] [3] ....
+%\bibliography{BiBs}  % This calls the file (BiBs.bib) which contains all the latex citations 
+\bibliography{bibliography}
+
+\input{appendices} % Appendices
+
+\end{document}
